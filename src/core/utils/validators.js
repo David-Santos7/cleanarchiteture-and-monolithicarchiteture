@@ -1,25 +1,35 @@
-// src/shared/utils/validators.js
+import { AppError }
+  from '../errors/AppError'
 
-import { AppError } from './errors/appError'
+export function validateEmail(email) {
 
-export function validateName(name) {
-  if (!name || name.length < 3) {
+  const regex =
+    /\S+@\S+\.\S+/
+
+  if (!regex.test(email)) {
+
     throw new AppError(
-      'Nome deve possuir no mínimo 3 caracteres'
+      'Email inválido'
     )
   }
 }
 
-export function validateEmail(email) {
-  const regex = /\S+@\S+\.\S+/
+export function validateName(name) {
 
-  if (!regex.test(email)) {
-    throw new AppError('Email inválido')
+  if (!name || name.length < 3) {
+
+    throw new AppError(
+      'Nome inválido'
+    )
   }
 }
 
-export function validatePhone(phone) {
-  if (!phone || phone.length < 10) {
-    throw new AppError('Telefone inválido')
+export function validateAge(age) {
+
+  if (age < 5) {
+
+    throw new AppError(
+      'Idade inválida'
+    )
   }
 }

@@ -1,14 +1,14 @@
-// src/main.js
+import './shared/styles/global.css'
 
-import './presentation/styles/global.css'
-
-import { HomePage }
-  from './presentation/pages/home'
+import { startApp }
+  from './app/app'
 
 document.addEventListener(
+
   'DOMContentLoaded',
+
   () => {
 
-    HomePage()
+    startApp()
   }
 )
