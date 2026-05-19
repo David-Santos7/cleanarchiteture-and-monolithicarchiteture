@@ -1,6 +1,6 @@
 import { Lead } from '../../domain/entities/Lead';
 
-import { LeadDTO } from '../dtos/LeadDTO';
+import { LeadDTO } from '../dto/leadDTO';
 
 import { LeadService } from '../services/LeadService';
 

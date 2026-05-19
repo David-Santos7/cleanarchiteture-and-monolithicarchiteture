@@ -1,6 +1,6 @@
 // src/shared/utils/validators.js
 
-import { AppError } from '../errors/AppError'
+import { AppError } from './errors/appError'
 
 export function validateName(name) {
   if (!name || name.length < 3) {

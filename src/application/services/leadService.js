@@ -1,13 +1,13 @@
 import {
     validateName,
     validateEmail,
-    ValidatePhone
-} from '../../shared/utils/validators'
+    validatePhone
+} from '../../shared/utils/validator'
 
 export class LeadService {
-    validade(date) {
-        validateName(date.name)
-        validateEmail(date.email)
-        validatePhone(date.phone)
+    validate(data) {
+        validateName(data.name)
+        validateEmail(data.email)
+        validatePhone(data.phone)
     }
 }
